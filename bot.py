@@ -71,16 +71,11 @@ def usersonline(message, m):
                 l.append(str(i) + '. ' + member.name)
                 i = i + 1
     return l
-def botname(message):
-    for member in message.guild.members:
-        if member.bot:
-            return member.name
 
 @client.event
 async def on_message(message):
     if message.author == client.user:
         return
-    getbotname = (botname(message)).lower()
     ops = sys.platform
     msg = message.content.lower()
     msg = msg.replace(' ', '')
@@ -90,13 +85,18 @@ async def on_message(message):
                             f'* Find frnds\n'
                             f'* Server members\n'
                             f'* Online members\n'
+                            f'* Tell me a joke\n'
                             f'* <Eg:Alien> meaning\n'
                             f'* Current gold rate (or) Cgr\n'
                             f'* Covid19 updates\n'
                             f'* <Eg:2021><Eg:01> calendar\n'
                             f'* <Eg:Chennai> weather\n'
-                            f'* <Eg:Mars> wiki\n', value='+ *Shows Wikipedia results.*', inline=False)
-        msg1.add_field(name=f'* Tell me a joke\n* <Eg:Titanic> released year\n* My weight? my height <Eg:150> cm\n',
+                            f'#Shutdowning & Restarting\n',
+                            value=f'* shutdownwinpc!\n'
+                                  f'* restartwinpc!\n'
+                                  f'* shutdownlinux!\n'
+                                  f'* restartlinux!', inline=False)
+        msg1.add_field(name=f'* <Eg:Titanic> released year\n* My weight? my height <Eg:150> cm\n',
                        value=f'+ *This command guess ur weight according to ur height u provide.*\n  NOTE: *Guess only of age 18-50.*', inline=False)
         await message.channel.send(embed=msg1)
     if msg in ['hibro', 'hellobro', 'hi', 'hello', 'hida', 'higuys', 'helloguys', 'hey', 'heyguys', 'heybro']:
@@ -107,7 +107,7 @@ async def on_message(message):
         replytobye = ['Bye bro', f'Bye  {emoji.emojize(":waving_hand:")}', 'Bye da']
         response = random.choice(replytobye)
         await message.channel.send(response)
-    if msg in [f'{getbotname}tq', f'{getbotname}thanku', f'{getbotname}thankyou', f'{getbotname}thanks', f'{getbotname}nandri']:
+    if msg in [f'beccatq', f'beccathanku', f'beccathankyou', f'beccathanks', f'beccanandri']:
         replytotq = [f'Welcome  {emoji.emojize(":smiling_face_with_heart-eyes:")}']
         response = random.choice(replytotq)
         await message.channel.send(response)
@@ -217,7 +217,7 @@ async def on_message(message):
         cgr = soup.find('div', id = 'current-price').text
         msg1 = discord.Embed(title=cgr, color=0xFFFFFF)
         await message.channel.send(embed=msg1)
-    if msg in [f'{getbotname}loveudi{emoji.emojize(":heart_with_arrow:")}', f'{getbotname}loveuchellam{emoji.emojize(":heart_with_arrow:")}', f'{getbotname}loveudear{emoji.emojize(":heart_with_arrow:")}', f'{getbotname},iloveu{emoji.emojize(":heart_with_arrow:")}']:
+    if msg in [f'beccaloveudi{emoji.emojize(":heart_with_arrow:")}', f'beccaloveuchellam{emoji.emojize(":heart_with_arrow:")}', f'beccaloveudear{emoji.emojize(":heart_with_arrow:")}', f'becca,iloveu{emoji.emojize(":heart_with_arrow:")}']:
         own = str(message.guild.owner)
         if str(message.author) == own:
             await message.channel.send(f'Luv U toooo baby {emoji.emojize(":heart_with_ribbon:")}{emoji.emojize(":smiling_face_with_heart-eyes:")}{emoji.emojize(":face_blowing_a_kiss:")}{emoji.emojize(":kissing_face_with_closed_eyes:")}')
@@ -240,6 +240,34 @@ async def on_message(message):
         msg1 = discord.Embed(title=f'Total cases : {covid}\nRecovered cases : {recovered}\nTotal deaths : {deaths}', color=0xFF0000)
         await message.channel.send(embed=msg1)
         await message.channel.send('Stay home! Stay safe! bro')
+    if msg in ['shutdownwinpc!', 'restartwinpc!']:
+        if msg == 'shutdownwinpc!' and ops in ['windows', 'win32', 'win64', 'msys', 'cygwin']:
+            msg1 = discord.Embed(title=f'{ops} SHUTING DOWN ...', color=0xFF0000)
+            await message.channel.send(embed=msg1)
+            time.sleep(2)
+            os.system('shutdown /s /t 1')
+        elif msg == 'restartwinpc' and ops in ['windows', 'win32', 'win64', 'msys', 'cygwin']:
+            msg1 = discord.Embed(title=f'{ops} RESTARTING ...', color=0xFF0000)
+            await message.channel.send(embed=msg1)
+            time.sleep(2)
+            os.system('shutdown /r /t 1')
+        else:
+            msg1 = discord.Embed(title='This command works only in WINDOWS.', color=0xFF0000)
+            await message.channel.send(embed=msg1)
+    if msg in ['shutdownlinux!', 'restartlinux!']:
+        if msg == 'shutdownlinux!' and ops in ['linux', 'linux2']:
+            msg1 = discord.Embed(title=f'{ops} SHUTING DOWN ...', color=0xFF0000)
+            await message.channel.send(embed=msg1)
+            time.sleep(2)
+            os.system('sudo shutdown now')
+        elif msg == 'restartlinux!' and ops in ['linux', 'linux2']:
+            msg1 = discord.Embed(title=f'{ops} RESTARTING ...', color=0xFF0000)
+            await message.channel.send(embed=msg1)
+            time.sleep(2)
+            os.system('sudo reboot')
+        else:
+            msg1 = discord.Embed(title='This command works only in LINUX.', color=0xFF0000)
+            await message.channel.send(embed=msg1)
     if msg[-12:] == 'releasedyear':
         im = imdb.IMDb()
         search = im.search_movie(message.content[:-12])
