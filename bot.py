@@ -8,7 +8,6 @@ import discord
 import calendar
 import requests
 import wikipedia
-import instaloader
 import pandas as pd
 import numpy as np
 import pyjokes as jk
