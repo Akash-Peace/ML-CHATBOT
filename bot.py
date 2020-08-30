@@ -98,9 +98,7 @@ async def on_message(message):
                             f'* <Eg:Chennai> weather\n'
                             f'#Shutdowning & Restarting\n',
                             value=f'* shutdownwinpc!\n'
-                                  f'* restartwinpc!\n'
-                                  f'* shutdownlinux!\n'
-                                  f'* restartlinux!', inline=False)
+                                  f'* restartwinpc!', inline=False)
         msg1.add_field(name=f'* <Eg:Titanic> released year\n* My weight? my height <Eg:150> cm\n',
                        value=f'+ *This command guess ur weight according to ur height u provide.*\n  NOTE: *Guess only of age 18-50.*', inline=False)
         await message.channel.send(embed=msg1)
@@ -258,20 +256,6 @@ async def on_message(message):
             os.system('shutdown /r /t 1')
         else:
             msg1 = discord.Embed(title='This command works only in WINDOWS.', color=0xFF0000)
-            await message.channel.send(embed=msg1)
-    if msg in ['shutdownlinux!', 'restartlinux!']:
-        if msg == 'shutdownlinux!' and ops in ['linux', 'linux2']:
-            msg1 = discord.Embed(title=f'{ops} SHUTING DOWN ...', color=0xFF0000)
-            await message.channel.send(embed=msg1)
-            time.sleep(2)
-            os.system('sudo shutdown now')
-        elif msg == 'restartlinux!' and ops in ['linux', 'linux2']:
-            msg1 = discord.Embed(title=f'{ops} RESTARTING ...', color=0xFF0000)
-            await message.channel.send(embed=msg1)
-            time.sleep(2)
-            os.system('sudo reboot')
-        else:
-            msg1 = discord.Embed(title='This command works only in LINUX.', color=0xFF0000)
             await message.channel.send(embed=msg1)
     if msg[-12:] == 'releasedyear':
         im = imdb.IMDb()
