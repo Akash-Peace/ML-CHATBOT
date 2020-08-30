@@ -90,12 +90,12 @@ async def on_message(message):
                             f'* Find frnds\n'
                             f'* Server members\n'
                             f'* Online members\n'
-                            f'* <Eg:Mars> wiki\n'
                             f'* <Eg:Alien> meaning\n'
                             f'* Current gold rate (or) Cgr\n'
                             f'* Covid19 updates\n'
                             f'* <Eg:2021><Eg:01> calendar\n'
-                            f'* <Eg:Chennai> weather\n', value='/u200b', inline=False)
+                            f'* <Eg:Chennai> weather\n'
+                            f'* <Eg:Mars> wiki\n', value='+ *Shows Wikipedia results.*', inline=False)
         msg1.add_field(name=f'* Tell me a joke\n* <Eg:Titanic> released year\n* My weight? my height <Eg:150> cm\n',
                        value=f'+ *This command guess ur weight according to ur height u provide.*\n  NOTE: *Guess only of age 18-50.*', inline=False)
         await message.channel.send(embed=msg1)
