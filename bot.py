@@ -90,16 +90,13 @@ async def on_message(message):
                             f'* Find frnds\n'
                             f'* Server members\n'
                             f'* Online members\n'
-                            f'* Tell me a joke\n'
+                            f'* <Eg:Mars> wiki\n'
                             f'* <Eg:Alien> meaning\n'
                             f'* Current gold rate (or) Cgr\n'
                             f'* Covid19 updates\n'
                             f'* <Eg:2021><Eg:01> calendar\n'
-                            f'* <Eg:Chennai> weather\n'
-                            f'#Shutdowning & Restarting\n',
-                            value=f'* shutdownwinpc!\n'
-                                  f'* restartwinpc!', inline=False)
-        msg1.add_field(name=f'* <Eg:Titanic> released year\n* My weight? my height <Eg:150> cm\n',
+                            f'* <Eg:Chennai> weather\n', value='/u200b', inline=False)
+        msg1.add_field(name=f'* Tell me a joke\n* <Eg:Titanic> released year\n* My weight? my height <Eg:150> cm\n',
                        value=f'+ *This command guess ur weight according to ur height u provide.*\n  NOTE: *Guess only of age 18-50.*', inline=False)
         await message.channel.send(embed=msg1)
     if msg in ['hibro', 'hellobro', 'hi', 'hello', 'hida', 'higuys', 'helloguys', 'hey', 'heyguys', 'heybro']:
@@ -243,20 +240,6 @@ async def on_message(message):
         msg1 = discord.Embed(title=f'Total cases : {covid}\nRecovered cases : {recovered}\nTotal deaths : {deaths}', color=0xFF0000)
         await message.channel.send(embed=msg1)
         await message.channel.send('Stay home! Stay safe! bro')
-    if msg in ['shutdownwinpc!', 'restartwinpc!']:
-        if msg == 'shutdownwinpc!' and ops in ['windows', 'win32', 'win64', 'msys', 'cygwin']:
-            msg1 = discord.Embed(title=f'{ops} SHUTING DOWN ...', color=0xFF0000)
-            await message.channel.send(embed=msg1)
-            time.sleep(2)
-            os.system('shutdown /s /t 1')
-        elif msg == 'restartwinpc' and ops in ['windows', 'win32', 'win64', 'msys', 'cygwin']:
-            msg1 = discord.Embed(title=f'{ops} RESTARTING ...', color=0xFF0000)
-            await message.channel.send(embed=msg1)
-            time.sleep(2)
-            os.system('shutdown /r /t 1')
-        else:
-            msg1 = discord.Embed(title='This command works only in WINDOWS.', color=0xFF0000)
-            await message.channel.send(embed=msg1)
     if msg[-12:] == 'releasedyear':
         im = imdb.IMDb()
         search = im.search_movie(message.content[:-12])
