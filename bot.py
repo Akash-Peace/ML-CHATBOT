@@ -126,7 +126,7 @@ async def on_message(message):
                      'https://i.pinimg.com/564x/92/3e/a7/923ea75ec291588f24aec2eb2e9e67fe.jpg']
         response = random.choice(replytohi)
         await message.channel.send(response)
-    if msg in ['servermembers', 'crewmembers', 'wonkru', 'akashagang']:
+    if msg in ['servermembers', 'crewmembers', 'wonkru', 'akashagang'] and not isinstance(message.channel, discord.channel.DMChannel):
         botsInServerCount = sum(member.bot for member in message.guild.members)
         usersInServerCount = message.guild.member_count - botsInServerCount
         msg1 = discord.Embed(title=f'Frnds in {message.guild.name}  {emoji.emojize(":people_holding_hands:")}', color=0xFFFFFF)
@@ -134,7 +134,7 @@ async def on_message(message):
         msg1.add_field(name=f'Humans : ', value=('\n'.join(usersname(message, m=0))), inline=False)
         msg1.add_field(name=f'Bots : ', value=('\n'.join(usersname(message, m=1))), inline=False)
         await message.channel.send(embed=msg1)
-    if msg in ['membersstatus', 'isanyoneonline', 'isanyoneonline?', 'isanyonealive', 'isanyonealive?', 'onlinemembers']:
+    if msg in ['membersstatus', 'isanyoneonline', 'isanyoneonline?', 'isanyonealive', 'isanyonealive?', 'onlinemembers'] and not isinstance(message.channel, discord.channel.DMChannel):
         onlinehumans = sum(member.status == discord.Status.online and not member.bot for member in message.guild.members)
         onlinebot = sum(member.status == discord.Status.online and member.bot for member in message.guild.members)
         onlinetotal = sum(member.status == discord.Status.online for member in message.guild.members)
@@ -214,11 +214,18 @@ async def on_message(message):
         msg1 = discord.Embed(title=cgr, color=0xFFFFFF)
         await message.channel.send(embed=msg1)
     if msg in ['iloveubecca', f'beccaloveudi{emoji.emojize(":heart_with_arrow:")}', f'beccaloveuchellam{emoji.emojize(":heart_with_arrow:")}', f'beccaloveudear{emoji.emojize(":heart_with_arrow:")}', f'becca,iloveu{emoji.emojize(":heart_with_arrow:")}']:
-        own = str(message.guild.owner)
-        if str(message.author) == own:
-            await message.channel.send(f'Luv U toooo baby {emoji.emojize(":heart_with_ribbon:")}{emoji.emojize(":smiling_face_with_heart-eyes:")}{emoji.emojize(":face_blowing_a_kiss:")}{emoji.emojize(":kissing_face_with_closed_eyes:")}')
+        if not isinstance(message.channel, discord.channel.DMChannel):
+            own = str(message.guild.owner)
+            if str(message.author) == own:
+                await message.channel.send(f'Luv U toooo baby {emoji.emojize(":heart_with_ribbon:")}{emoji.emojize(":smiling_face_with_heart-eyes:")}{emoji.emojize(":face_blowing_a_kiss:")}{emoji.emojize(":kissing_face_with_closed_eyes:")}')
+            else:
+                await message.channel.send(f'No bro, I Luv {own},\nMe and {own} made for each other {emoji.emojize(":red_heart:")}')
         else:
-            await message.channel.send(f'No bro, I Luv Akash A,\nMe and Akash A made for each other {emoji.emojize(":red_heart:")}')
+            if str(message.author.id) == "747445770071965736":
+                await message.channel.send(f'Luv U toooo baby {emoji.emojize(":heart_with_ribbon:")}{emoji.emojize(":smiling_face_with_heart-eyes:")}{emoji.emojize(":face_blowing_a_kiss:")}{emoji.emojize(":kissing_face_with_closed_eyes:")}')
+            else:
+                tagname = str(client.get_user(747445770071965736))
+                await message.channel.send(f'Ithuku per thaan ECHA, I Luv {tagname[:-5]},\nMe and {tagname[:-5]} made for each other {emoji.emojize(":red_heart:")}')
     if msg[-4:] == 'wiki':
         pedia = wikipedia.summary(message.content[:-4], sentences=4)
         msg1 = discord.Embed(title=f'{message.content[:-4]} WIKIPEDIA', color=0xFFFFFF)
@@ -297,13 +304,13 @@ async def on_message(message):
         await message.channel.send('This is my Short Story!')
 
 
-@client.event
-async def on_error(event, *args, **kwargs):
-    with open('err.log', 'a') as f:
-        if event == 'on_message':
-            f.write(f'Unhandled message: {args[0]}\n')
-        else:
-            raise
+#@client.event
+#async def on_error(event, *args, **kwargs):
+#    with open('err.log', 'a') as f:
+#        if event == 'on_message':
+#            f.write(f'Unhandled message: {args[0]}\n')
+#        else:
+#            raise
 
 client.run(TOKEN)
 
