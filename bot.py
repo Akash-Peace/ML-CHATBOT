@@ -85,18 +85,14 @@ async def on_message(message):
                             f'* Find frnds\n'
                             f'* Server members\n'
                             f'* Online members\n'
-                            f'* Tell me a joke\n'
                             f'* <Eg:Alien> meaning\n'
                             f'* Current gold rate (or) Cgr\n'
                             f'* Covid19 updates\n'
                             f'* <Eg:2021><Eg:01> calendar\n'
                             f'* <Eg:Chennai> weather\n'
-                            f'#Shutdowning & Restarting\n',
-                            value=f'* shutdownwinpc!\n'
-                                  f'* restartwinpc!\n'
-                                  f'* shutdownlinux!\n'
-                                  f'* restartlinux!', inline=False)
-        msg1.add_field(name=f'* <Eg:Titanic> released year\n* My weight? my height <Eg:150> cm\n',
+                            f'* <Eg:Mars> wiki\n',
+                            value=f'+ *Shows Wikipedia results*', inline=False)
+        msg1.add_field(name=f'* Tell me a joke\n* <Eg:Titanic> released year\n* My weight? my height <Eg:150> cm\n',
                        value=f'+ *This command guess ur weight according to ur height u provide.*\n  NOTE: *Guess only of age 18-50.*', inline=False)
         await message.channel.send(embed=msg1)
     if msg in ['hibro', 'hellobro', 'hi', 'hello', 'hida', 'higuys', 'helloguys', 'hey', 'heyguys', 'heybro']:
@@ -217,12 +213,12 @@ async def on_message(message):
         cgr = soup.find('div', id = 'current-price').text
         msg1 = discord.Embed(title=cgr, color=0xFFFFFF)
         await message.channel.send(embed=msg1)
-    if msg in [f'beccaloveudi{emoji.emojize(":heart_with_arrow:")}', f'beccaloveuchellam{emoji.emojize(":heart_with_arrow:")}', f'beccaloveudear{emoji.emojize(":heart_with_arrow:")}', f'becca,iloveu{emoji.emojize(":heart_with_arrow:")}']:
+    if msg in ['iloveubecca', f'beccaloveudi{emoji.emojize(":heart_with_arrow:")}', f'beccaloveuchellam{emoji.emojize(":heart_with_arrow:")}', f'beccaloveudear{emoji.emojize(":heart_with_arrow:")}', f'becca,iloveu{emoji.emojize(":heart_with_arrow:")}']:
         own = str(message.guild.owner)
         if str(message.author) == own:
             await message.channel.send(f'Luv U toooo baby {emoji.emojize(":heart_with_ribbon:")}{emoji.emojize(":smiling_face_with_heart-eyes:")}{emoji.emojize(":face_blowing_a_kiss:")}{emoji.emojize(":kissing_face_with_closed_eyes:")}')
         else:
-            await message.channel.send(f'No bro, I Luv {own[:-5]},\nMe and {own[:-5]} made for each other {emoji.emojize(":red_heart:")}')
+            await message.channel.send(f'No bro, I Luv Akash A,\nMe and Akash A made for each other {emoji.emojize(":red_heart:")}')
     if msg[-4:] == 'wiki':
         pedia = wikipedia.summary(message.content[:-4], sentences=4)
         msg1 = discord.Embed(title=f'{message.content[:-4]} WIKIPEDIA', color=0xFFFFFF)
@@ -240,34 +236,6 @@ async def on_message(message):
         msg1 = discord.Embed(title=f'Total cases : {covid}\nRecovered cases : {recovered}\nTotal deaths : {deaths}', color=0xFF0000)
         await message.channel.send(embed=msg1)
         await message.channel.send('Stay home! Stay safe! bro')
-    if msg in ['shutdownwinpc!', 'restartwinpc!']:
-        if msg == 'shutdownwinpc!' and ops in ['windows', 'win32', 'win64', 'msys', 'cygwin']:
-            msg1 = discord.Embed(title=f'{ops} SHUTING DOWN ...', color=0xFF0000)
-            await message.channel.send(embed=msg1)
-            time.sleep(2)
-            os.system('shutdown /s /t 1')
-        elif msg == 'restartwinpc' and ops in ['windows', 'win32', 'win64', 'msys', 'cygwin']:
-            msg1 = discord.Embed(title=f'{ops} RESTARTING ...', color=0xFF0000)
-            await message.channel.send(embed=msg1)
-            time.sleep(2)
-            os.system('shutdown /r /t 1')
-        else:
-            msg1 = discord.Embed(title='This command works only in WINDOWS.', color=0xFF0000)
-            await message.channel.send(embed=msg1)
-    if msg in ['shutdownlinux!', 'restartlinux!']:
-        if msg == 'shutdownlinux!' and ops in ['linux', 'linux2']:
-            msg1 = discord.Embed(title=f'{ops} SHUTING DOWN ...', color=0xFF0000)
-            await message.channel.send(embed=msg1)
-            time.sleep(2)
-            os.system('sudo shutdown now')
-        elif msg == 'restartlinux!' and ops in ['linux', 'linux2']:
-            msg1 = discord.Embed(title=f'{ops} RESTARTING ...', color=0xFF0000)
-            await message.channel.send(embed=msg1)
-            time.sleep(2)
-            os.system('sudo reboot')
-        else:
-            msg1 = discord.Embed(title='This command works only in LINUX.', color=0xFF0000)
-            await message.channel.send(embed=msg1)
     if msg[-12:] == 'releasedyear':
         im = imdb.IMDb()
         search = im.search_movie(message.content[:-12])
@@ -326,7 +294,7 @@ async def on_message(message):
                             ' – Becca, to A.L.L.I.E',value=f"{'The 100':-^30}",inline=False)
         await message.channel.send(embed=msg1)
         await message.channel.send('https://vignette.wikia.nocookie.net/thehundred/images/6/61/The100_S3_Perverse_Instantiation_2_Becca.jpg/revision/latest/top-crop/width/300/height/300?cb=20160529204014')
-        await message.channel.send('This is my Kutty Story!')
+        await message.channel.send('This is my Short Story!')
 
 
 @client.event
