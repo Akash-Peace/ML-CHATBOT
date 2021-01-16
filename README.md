@@ -6,7 +6,7 @@
     <a href="https://discord.com/"><strong>A Discord Chatbot</strong></a>
     <br />
     <br />
-    <a href="https://discord.gg/aWwZDR8MVm">Join Channel</a>
+    <a href="https://discord.gg/aWwZDR8MVm">Chat with Becca</a>
     ·
     <a href="https://github.com/Akash-Peace/ML-CHATBOT/issues">Report Bug</a>
     ·
