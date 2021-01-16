@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <p align="center">
-  <img src="https://github.com/Akash-Peace/ML-CHATBOT/blob/master/beccabotlogo.png" alt="Logo" width="150" height="150">
+  <img src="https://github.com/Akash-Peace/ML-CHATBOT/blob/master/beccaboticon.png" alt="Logo" width="150" height="150">
   <h3 align="center">XO</h3>
   <p align="center">
     <a href="https://developer.android.com/studio"><strong>Android Studio App</strong></a>
