@@ -1,16 +1,16 @@
 <!-- PROJECT LOGO -->
 <p align="center">
   <img src="https://github.com/Akash-Peace/ML-CHATBOT/blob/master/beccaboticon.png" alt="Logo" width="150" height="150">
-  <h3 align="center">XO</h3>
+  <h3 align="center">BECCA BOT</h3>
   <p align="center">
-    <a href="https://developer.android.com/studio"><strong>Android Studio App</strong></a>
+    <a href="https://discord.com/"><strong>A Discord Chatbot</strong></a>
     <br />
     <br />
-    <a href="https://drive.google.com/file/d/14O1DZrsRm-9mfIQeKzi-Vlj_B-A1KyS3/view?usp=sharing">Download</a>
+    <a href="https://discord.gg/aWwZDR8MVm">Join Channel</a>
     ·
-    <a href="https://github.com/Akash-Peace/ANDROIDSTUDIO-GAME/issues">Report Bug</a>
+    <a href="https://github.com/Akash-Peace/ML-CHATBOT/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Akash-Peace/ANDROIDSTUDIO-GAME/issues">Request Feature</a>
+    <a href="https://github.com/Akash-Peace/ML-CHATBOT/issues">Request Feature</a>
   </p>
 </p>
 
@@ -23,8 +23,6 @@
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#powered-by">Powered by</a></li>
-    <li><a href="#requirements">Requirements</a></li>
-    <li><a href="#installation">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -36,44 +34,31 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-XO project objective is to initiate a playable game between user and computer. As it is mentioned, I decided to present this project as a android application, particularly using [Android Studio](https://developer.android.com/studio). User game data and login credentials are privately stored in [firebase cloud](https://firebase.google.com/). User can change password even though they forgotten their existing password. User can switch to multiple android devices with a same account because it's store user account data in firebase cloud as it's an online application. This project is licensed by [MIT](https://github.com/Akash-Peace/ANDROIDSTUDIO-GAME/blob/main/LICENSE) and it is free to use, fork, modify and distribute. If you like this project give a _star_ and follow me.
+Becca bot project objective is to make a bot chat with users and help them by transferring information about what they ask. Help users with informations like Covid-19 updates, Weather report, Trending topics, Movie releases, Wikipedia services, Gold rate updates and even fill you with Jokes and much more. One more thing, Becca bot guess your weight according to your height which the guess is done by [Machine Learning(ML)](https://en.wikipedia.org/wiki/Machine_learning).  Becca bot uses the WebSocket API to request a connection, identify itself, heartbeat, manage voice connections, and do a few more fundamental things. As it is mentioned, I decided to present this project using [Discord Application](https://discord.com/). This project is licensed by [MIT](https://github.com/Akash-Peace/ML-CHATBOT/blob/master/LICENSE) and it is free to use, fork, modify and distribute. If you like this project give a _star_ and follow me.
 
 ## Built With
 
-* [Android Studio](https://developer.android.com/studio)
-* [Java](https://www.java.com/en/)
-* [XML](https://developer.android.com/guide/topics/ui/declaring-layout)
+* [Discord](https://discord.com/)
+* [Python](https://www.python.org/)
+
 
 ## Powered by
 
-* [Firebase Cloud](https://firebase.google.com/)
+* [Machine Learning(ML)](https://en.wikipedia.org/wiki/Machine_learning)
 
-
-## Requirements
-
-**Device:** Smartphone\
-**OS:** Android\
-**Network:** 2G or Above 2G 
-
-
-## Installation
-
-Step 1: Download [**XO**](https://drive.google.com/file/d/14O1DZrsRm-9mfIQeKzi-Vlj_B-A1KyS3/view?usp=sharing) apk file.\
-Step 2: Click _XO.apk_ file in android.\
-Step 3: Installation screen appears, Click _install_. Have fun!!!
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Usage of this project is to make users think strategical ideas to win against computer. Users data like login credentials, score of win, loss, draw are stored privately in firebase cloud, So you can use a same account in multiple android devices.
+Usage of this project is to help user by transferring informations like Covid-19 updates, Weather report, Trending topics, Movie releases, Wikipedia services, Gold rate updates and even fill you with Jokes and much more through a bot. Becca bot guess your weight according to your height which the guess is done by Machine Learning(ML).
 
 
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/Akash-Peace/ANDROIDSTUDIO-GAME/blob/main/LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/Akash-Peace/ML-CHATBOT/blob/master/LICENSE) for more information.
 
 
 
