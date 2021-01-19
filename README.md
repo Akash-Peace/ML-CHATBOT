@@ -55,6 +55,10 @@ Becca bot project objective is to make a bot chat with users and help them by tr
 Usage of this project is to help user by transferring informations like Covid-19 updates, Weather report, Trending topics, Movie releases, Wikipedia services, Gold rate updates and even fill you with Jokes and much more through a bot. Becca bot guess your weight according to your height which the guess is done by Machine Learning(ML).
 
 
+## Screenshots
+
+View [Screenshots](https://github.com/Akash-Peace/ML-CHATBOT/tree/master/Screenshots) here.
+
 
 <!-- LICENSE -->
 ## License
