@@ -24,6 +24,7 @@
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#powered-by">Powered by</a></li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
