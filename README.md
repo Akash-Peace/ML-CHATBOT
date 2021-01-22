@@ -35,7 +35,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Becca bot project objective is to make a bot chat with users and help them by transferring information about what they ask. Help users with informations like Covid-19 updates, Weather report, Trending topics, Movie releases, Wikipedia services, Gold rate updates and even fill you with Jokes and much more. One more thing, Becca bot guess your weight according to your height which the guess is done by [Machine Learning(ML)](https://en.wikipedia.org/wiki/Machine_learning).  Becca bot uses the WebSocket API to request a connection, identify itself, heartbeat, manage voice connections, and do a few more fundamental things. As it is mentioned, I decided to present this project using [Discord Application](https://discord.com/). This project is licensed by [MIT](https://github.com/Akash-Peace/ML-CHATBOT/blob/master/LICENSE) and it is free to use, fork, modify and distribute. If you like this project give a _star_ and follow me.
+Becca Bot project objective is to make a bot chat with users and help them by transferring information about their questions. Help users with pieces of information like Covid-19 updates, Weather report, Trending topics, Movie releases, Wikipedia services, Gold rate updates, and even fill you with Jokes and much more. One more thing, Becca bot guess your weight according to your height, which the guess is made by [Machine Learning(ML)](https://en.wikipedia.org/wiki/Machine_learning). Becca bot uses the WebSocket API to request a connection, identify itself, heartbeat, manage voice connections, and do a few more fundamental things. As mentioned, I decided to present this project using the [Discord application](https://discord.com/). [MIT](https://github.com/Akash-Peace/ML-CHATBOT/blob/master/LICENSE) licenses this project, and it is free to use, fork, modify and distribute. If you like this project, give a star and follow me.
+
 
 ## Built With
 
