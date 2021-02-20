@@ -22,10 +22,11 @@
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#built-with">Built With</a></li>
-    <li><a href="#powered-by">Powered by</a></li>
+    <li><a href="#powered-by">Powered By</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#screenshots">Screenshots</a></li>
     <li><a href="#license">License</a></li>
+    <li><a href="#my-system-spec">My System Spec</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -44,7 +45,7 @@ Becca Bot project objective is to make a bot chat with users and help them by tr
 * [Python](https://www.python.org/)
 
 
-## Powered by
+## Powered By
 
 * [Machine Learning(ML)](https://en.wikipedia.org/wiki/Machine_learning)
 * [CSV](https://www.kaggle.com/mustafaali96/weight-height)
@@ -68,11 +69,25 @@ View [Screenshots](https://github.com/Akash-Peace/ML-CHATBOT/tree/master/Screens
 Distributed under the MIT License. See [LICENSE](https://github.com/Akash-Peace/ML-CHATBOT/blob/master/LICENSE) for more information.
 
 
+## My System Spec
+
+**OS:** [Manjaro](https://manjaro.org/)\
+**Model:** Acer Aspire 5 A515-51G\
+**Processor:** Intel i5 7th gen\
+**Ram:** DDR4 8gb\
+**Disk:** HDD 100gb
+
 
 <!-- CONTACT -->
 ## Contact
 
-<strong>Hi, I'm Akash.A, Computer Science Engineer.</strong>
+Akash.A,\
+Rajalakshmi Engineering College,\
+Computer Science Engineer,\
+akashcse2000@gmail.com,\
+8608550403,\
+Chennai.
+
 
 ![GitHub metrics](https://metrics.lecoq.io/Akash-Peace)  
 
